@@ -59,6 +59,38 @@ export default function Home() {
   const [visibleCardCount, setVisibleCardCount] = useState(3);
   const storyViewportRef = useRef<HTMLDivElement>(null);
   const maxStoryIndex = successStories.length - visibleCardCount;
+  const pageSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://noventrixgloballtd.com/#webpage",
+    name: "Best Salesforce Developers in the UK",
+    url: "https://noventrixgloballtd.com/",
+    description:
+      "Salesforce strategy, architecture, implementation, data, AI, and automation for UK and international teams.",
+    inLanguage: "en-GB",
+    isPartOf: { "@id": "https://noventrixgloballtd.com/#website" },
+    about: { "@id": "https://noventrixgloballtd.com/#organization" },
+  };
+  const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: "Salesforce services",
+    itemListElement: [
+      "Salesforce architecture",
+      "Delivery and implementation",
+      "Data, AI and automation",
+      "Rescue and optimisation",
+    ].map((name, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      item: {
+        "@type": "Service",
+        name,
+        provider: { "@id": "https://noventrixgloballtd.com/#organization" },
+        areaServed: ["GB", "Worldwide"],
+      },
+    })),
+  };
 
   useEffect(() => {
     const updateVisibleCards = () => setVisibleCardCount(window.matchMedia("(max-width: 760px)").matches ? 1 : 3);
@@ -89,7 +121,16 @@ export default function Home() {
   };
 
   return (
-    <main>
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(pageSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
+      <main>
       <div className="announcement">Salesforce delivery for teams that are ready to move <span>↗</span></div>
       <header className="site-header">
         <a className="brand" href="#top" aria-label="Noventri home">
@@ -107,15 +148,15 @@ export default function Home() {
         <div className="hero-grid" />
         <div className="hero-copy">
           <p className="eyebrow reveal">Salesforce / strategy / delivery</p>
-          <h1 className="reveal reveal-delay-1">Make your<br /><em>next move</em><br />count.</h1>
-          <p className="hero-intro reveal reveal-delay-2">Noventri helps ambitious teams across the UK, US and Germany turn Salesforce into a system people actually want to use.</p>
+          <h1 className="reveal reveal-delay-1">Make Salesforce<br /><em>work as hard as</em><br />your business does.</h1>
+          <p className="hero-intro reveal reveal-delay-2">Noventri helps ambitious teams, primarily across the UK and internationally, turn Salesforce into a system people actually want to use.</p>
           <a className="button button-light reveal reveal-delay-3" href="#contact">Talk to an expert <span>↗</span></a>
         </div>
         <div className="hero-note"><span className="line" />Built for momentum<span className="hero-note-index">01 / 04</span></div>
       </section>
 
       <section className="intro section-pad">
-        <div className="section-label">01 — The point of view</div>
+        <div className="intro-side"><div className="intro-image" aria-hidden="true" /><div className="section-label">01 — The point of view</div></div>
         <div className="intro-content"><h2>Good technology should make the work feel <em>lighter.</em></h2><p>We bring senior Salesforce architecture, thoughtful design and hands-on delivery together in one team. No layers of handoffs. No black boxes. Just better systems, built around how your business really works.</p><a className="text-link" href="#approach">How we work <span>↗</span></a></div>
       </section>
 
@@ -158,13 +199,14 @@ export default function Home() {
 
       <section className="statement" id="approach"><div className="statement-image" /><div className="statement-copy"><div className="section-label">04 — The Noventri way</div><h2>Senior thinking.<br /><em>Human delivery.</em></h2><p>The person who shapes the solution is the person who helps you deliver it. That means sharper decisions, fewer surprises and a team that understands the detail without losing sight of the bigger picture.</p><div className="commitments"><div><strong>01</strong><span>Clarity from day one</span></div><div><strong>02</strong><span>Progress you can see</span></div><div><strong>03</strong><span>Systems that last</span></div></div></div></section>
 
-      <section className="industries section-pad" id="industries"><div className="section-label">05 — Where we help</div><div className="industry-grid"><div><span>Financial services</span><small>Trust, control and growth at scale.</small></div><div><span>Healthcare & life sciences</span><small>Better outcomes, less friction.</small></div><div><span>Technology & SaaS</span><small>Build a revenue engine that keeps up.</small></div><div><span>Professional services</span><small>Make every relationship count.</small></div></div></section>
+      <section className="industries section-pad" id="industries"><div className="section-label">05 — Where we help</div><div className="industry-grid"><div><span>Salesforce Energy & Utilities Cloud</span><small>Powering better outcomes across essential services.</small></div><div><span>Salesforce Communications Cloud - Telecommunications</span><small>Connect every customer interaction.</small></div><div><span>Financial services</span><small>Trust, control and growth at scale.</small></div><div><span>Healthcare & life sciences</span><small>Better outcomes, less friction.</small></div></div></section>
 
       <section className="insights section-pad" id="insights"><div className="section-heading"><div className="section-label">06 — A little thinking</div><a className="text-link" href="#contact">View all insights <span>↗</span></a></div><div className="insight-grid"><article><span className="article-tag">Perspective</span><h3>What a healthy Salesforce org actually looks like.</h3><a href="#contact">Read the thinking <span>↗</span></a></article><article><span className="article-tag">Field note</span><h3>AI is only as useful as the system underneath it.</h3><a href="#contact">Read the thinking <span>↗</span></a></article><article><span className="article-tag">Guide</span><h3>Five signals it is time to rethink your CRM.</h3><a href="#contact">Read the thinking <span>↗</span></a></article></div></section>
 
-      <section className="contact" id="contact"><div className="contact-mark">N<span>↗</span></div><div><div className="section-label">Your next move</div><h2>Let’s build<br /><em>what’s next.</em></h2><p>Tell us what is stuck, what is changing, or where you want to go. We will bring the right people to the first conversation.</p><a className="button button-dark" href="mailto:hello@noventri.com">Start a conversation <span>↗</span></a></div></section>
+      <section className="contact" id="contact"><div className="contact-mark">N<span>↗</span></div><div><div className="section-label">Your next move</div><h2>Let’s build<br /><em>what’s next.</em></h2><p>Tell us what is stuck, what is changing, or where you want to go. We will bring the right people to the first conversation.</p><a className="button button-dark" href="mailto:info@noventrixgloballtd.com">info@noventrixgloballtd.com <span>↗</span></a><p>Based in Bournemouth, UK<br />Calvin Road, Bournemouth BH9 1LN<br />Supporting clients across the UK and internationally.</p></div></section>
 
-      <footer className="site-footer"><div className="footer-top"><a className="brand brand-footer" href="#top"><span className="brand-mark">N</span><span>noventri<span className="brand-dot">.</span></span></a><p>Salesforce strategy and delivery<br />for businesses going places.</p><div className="footer-links"><a href="#services">Services</a><a href="#industries">Industries</a><a href="#approach">Approach</a><a href="#contact">Contact</a></div></div><div className="footer-bottom"><span>© 2026 Noventri Global Ltd.</span><span>London · New York · Berlin</span><span>Built for better work <span className="brand-dot">●</span></span></div></footer>
-    </main>
+      <footer className="site-footer"><div className="footer-top"><a className="brand brand-footer" href="#top"><span className="brand-mark">N</span><span>noventri<span className="brand-dot">.</span></span></a><p>Salesforce strategy and delivery<br />for businesses going places.</p><div className="footer-links"><a href="#services">Services</a><a href="#industries">Industries</a><a href="#approach">Approach</a><a href="#contact">Contact</a></div></div><div className="footer-bottom"><span>© 2026 Noventri Global Ltd.</span><span>Calvin Road, Bournemouth BH9 1LN · UK</span><span>Built for better work <span className="brand-dot">●</span></span></div></footer>
+      </main>
+    </>
   );
 }
