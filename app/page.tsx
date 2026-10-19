@@ -63,7 +63,7 @@ export default function Home() {
     "@context": "https://schema.org",
     "@type": "WebPage",
     "@id": "https://noventrixgloballtd.com/#webpage",
-    name: "Best Salesforce Developers in the UK",
+    name: "Salesforce Consultancy in Bournemouth, UK",
     url: "https://noventrixgloballtd.com/",
     description:
       "Salesforce strategy, architecture, implementation, data, AI, and automation for UK and international teams.",
@@ -133,8 +133,8 @@ export default function Home() {
       <main>
       <div className="announcement">Salesforce delivery for teams that are ready to move <span>↗</span></div>
       <header className="site-header">
-        <a className="brand" href="#top" aria-label="Noventri home">
-          <Image className="brand-logo" src="/logo.png" alt="Noventrix Global Ltd" width={617} height={201} priority />
+        <a className="brand" href="#top" aria-label="Noventrix Global LTD home">
+          <Image className="brand-logo" src="/logo.png" alt="Noventrix Global LTD" width={617} height={201} priority />
         </a>
         <input className="menu-toggle" type="checkbox" id="menu-toggle" />
         <label className="menu-button" htmlFor="menu-toggle" aria-label="Toggle navigation"><span /><span /></label>
@@ -149,7 +149,7 @@ export default function Home() {
         <div className="hero-copy">
           <p className="eyebrow reveal">Salesforce / strategy / delivery</p>
           <h1 className="reveal reveal-delay-1">Make Salesforce<br /><em>work as hard as</em><br />your business does.</h1>
-          <p className="hero-intro reveal reveal-delay-2">Noventri helps ambitious teams, primarily across the UK and internationally, turn Salesforce into a system people actually want to use.</p>
+          <p className="hero-intro reveal reveal-delay-2">Noventrix Global LTD helps ambitious teams, primarily across the UK and internationally, turn Salesforce into a system people actually want to use.</p>
           <a className="button button-light reveal reveal-delay-3" href="#contact">Talk to an expert <span>↗</span></a>
         </div>
         <div className="hero-note"><span className="line" />Built for momentum<span className="hero-note-index">01 / 04</span></div>
@@ -197,7 +197,7 @@ export default function Home() {
         <p className="carousel-note">Selected work, representative outcomes. Every engagement starts with the context behind the number.</p>
       </section>
 
-      <section className="statement" id="approach"><div className="statement-image" /><div className="statement-copy"><div className="section-label">04 — The Noventri way</div><h2>Senior thinking.<br /><em>Human delivery.</em></h2><p>The person who shapes the solution is the person who helps you deliver it. That means sharper decisions, fewer surprises and a team that understands the detail without losing sight of the bigger picture.</p><div className="commitments"><div><strong>01</strong><span>Clarity from day one</span></div><div><strong>02</strong><span>Progress you can see</span></div><div><strong>03</strong><span>Systems that last</span></div></div></div></section>
+      <section className="statement" id="approach"><div className="statement-image" /><div className="statement-copy"><div className="section-label">04 — The Noventrix way</div><h2>Senior thinking.<br /><em>Human delivery.</em></h2><p>The person who shapes the solution is the person who helps you deliver it. That means sharper decisions, fewer surprises and a team that understands the detail without losing sight of the bigger picture.</p><div className="commitments"><div><strong>01</strong><span>Clarity from day one</span></div><div><strong>02</strong><span>Progress you can see</span></div><div><strong>03</strong><span>Systems that last</span></div></div></div></section>
 
       <section className="industries section-pad" id="industries"><div className="section-label">05 — Where we help</div><div className="industry-grid"><div><span>Salesforce Energy & Utilities Cloud</span><small>Powering better outcomes across essential services.</small></div><div><span>Salesforce Communications Cloud - Telecommunications</span><small>Connect every customer interaction.</small></div><div><span>Financial services</span><small>Trust, control and growth at scale.</small></div><div><span>Healthcare & life sciences</span><small>Better outcomes, less friction.</small></div></div></section>
 
@@ -205,7 +205,15 @@ export default function Home() {
 
       <section className="contact" id="contact"><div className="contact-mark">N<span>↗</span></div><div><div className="section-label">Your next move</div><h2>Let’s build<br /><em>what’s next.</em></h2><p>Tell us what is stuck, what is changing, or where you want to go. We will bring the right people to the first conversation.</p><a className="button button-dark" href="mailto:info@noventrixgloballtd.com">info@noventrixgloballtd.com <span>↗</span></a><p>Based in Bournemouth, UK<br />Calvin Road, Bournemouth BH9 1LN<br />Supporting clients across the UK and internationally.</p></div></section>
 
-      <footer className="site-footer"><div className="footer-top"><a className="brand brand-footer" href="#top"><span className="brand-mark">N</span><span>noventri<span className="brand-dot">.</span></span></a><p>Salesforce strategy and delivery<br />for businesses going places.</p><div className="footer-links"><a href="#services">Services</a><a href="#industries">Industries</a><a href="#approach">Approach</a><a href="#contact">Contact</a></div></div><div className="footer-bottom"><span>© 2026 Noventri Global Ltd.</span><span>Calvin Road, Bournemouth BH9 1LN · UK</span><span>Built for better work <span className="brand-dot">●</span></span></div></footer>
+      <footer className="site-footer">
+        <div className="footer-top">
+          <div className="footer-brand"><a className="brand brand-footer" href="#top"><span className="brand-mark">N</span><span>Noventrix<span className="brand-dot">.</span></span></a><p>Salesforce strategy and delivery<br />for businesses going places.</p></div>
+          <div className="footer-column"><span>Explore</span><a href="#services">Services</a><a href="#industries">Industries</a><a href="#approach">Our approach</a><a href="#contact">Contact</a></div>
+          <div className="footer-column"><span>Contact</span><a href="mailto:info@noventrixgloballtd.com">info@noventrixgloballtd.com</a><span className="footer-subhead">Based in</span><p>Bournemouth, UK<br />Supporting clients across the UK and internationally.</p></div>
+          <div className="footer-column footer-company"><span>Company details</span><p><strong>Noventrix Global LTD</strong><br />Company number 17127364<br />Registered in England and Wales</p><a href="https://find-and-update.company-information.service.gov.uk/company/17127364" rel="noreferrer">View Companies House record ↗</a></div>
+        </div>
+        <div className="footer-bottom"><span>© 2026 Noventrix Global LTD</span><span>Registered office: 1 Calvin Road, Bournemouth, England, BH9 1LN</span><span><a href="/privacy">Privacy</a><a href="/cookies">Cookies</a><a href="/terms">Terms</a></span></div>
+      </footer>
       </main>
     </>
   );

@@ -1,12 +1,19 @@
+
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  // Generate a static website in the "out" directory
+  output: "export",
+
+  // Allow next/image to work without a server-side image optimizer
+  images: {
+    unoptimized: true,
+  },
+
   experimental: {
     agentFeedback: true,
   },
-  cacheComponents: true,
-  partialPrefetching: true,
+
   turbopack: {
     rules: {
       "*.css": {

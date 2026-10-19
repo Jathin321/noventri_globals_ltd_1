@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import { DM_Sans, Instrument_Serif } from "next/font/google";
+import CookieConsent from "@/components/CookieConsent";
 import "./globals.css";
 
 const siteUrl = "https://noventrixgloballtd.com";
-const companyName = "Noventrix Global Ltd";
+const companyName = "Noventrix Global LTD";
 const companyDescription =
-  "Noventrix Global Ltd is among the best Salesforce developers in the UK (United Kingdom), delivering Salesforce strategy, architecture, and implementation for UK and international clients.";
+  "Salesforce strategy, delivery, data and automation for teams in Bournemouth, across the UK and internationally.";
 
 const dmSans = DM_Sans({
   variable: "--font-sans",
@@ -21,7 +22,7 @@ const instrumentSerif = Instrument_Serif({
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Best Salesforce Developers in the UK",
+    default: "Salesforce Consultancy in Bournemouth, UK",
     template: "%s | Noventrix Global Ltd",
   },
   description: companyDescription,
@@ -29,18 +30,21 @@ export const metadata: Metadata = {
   creator: companyName,
   publisher: companyName,
   alternates: { canonical: "/" },
+  icons: {
+    icon: "/logo.png",
+  },
   openGraph: {
     type: "website",
     locale: "en_GB",
     url: siteUrl,
     siteName: companyName,
-    title: "Best Salesforce Developers in the UK",
+    title: "Salesforce Consultancy in Bournemouth, UK",
     description: companyDescription,
     images: [{ url: "/logo.png", alt: `${companyName} logo` }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Best Salesforce Developers in the UK",
+    title: "Salesforce Consultancy in Bournemouth, UK",
     description: companyDescription,
     images: ["/logo.png"],
   },
@@ -67,6 +71,16 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     logo: `${siteUrl}/logo.png`,
     description: companyDescription,
     email: "info@noventrixgloballtd.com",
+    identifier: "17127364",
+    sameAs: ["https://find-and-update.company-information.service.gov.uk/company/17127364"],
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "1 Calvin Road",
+      addressLocality: "Bournemouth",
+      addressRegion: "England",
+      postalCode: "BH9 1LN",
+      addressCountry: "GB",
+    },
     areaServed: ["GB", "Worldwide"],
     knowsAbout: ["Salesforce strategy", "Salesforce implementation", "Salesforce architecture"],
   };
@@ -83,6 +97,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
+      suppressHydrationWarning
       className={`${dmSans.variable} ${instrumentSerif.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
@@ -95,6 +110,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
         />
         {children}
+        <CookieConsent />
       </body>
     </html>
   );
