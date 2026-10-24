@@ -131,10 +131,10 @@ export default function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
       />
       <main>
-      <div className="announcement">Salesforce delivery for teams that are ready to move <span>↗</span></div>
+      <div className="announcement" style={{ color: "#6f4014" }}>Salesforce delivery for teams that are ready to move <span>↗</span></div>
       <header className="site-header">
         <a className="brand" href="#top" aria-label="Noventrix Global LTD home">
-          <Image className="brand-logo" src="/logo.png" alt="Noventrix Global LTD" width={617} height={201} priority />
+          <Image className="brand-logo" src="/half_logo.png" alt="Noventrix Global LTD" width={1152} height={768} priority />
         </a>
         <input className="menu-toggle" type="checkbox" id="menu-toggle" />
         <label className="menu-button" htmlFor="menu-toggle" aria-label="Toggle navigation"><span /><span /></label>
@@ -203,11 +203,11 @@ export default function Home() {
 
       <section className="insights section-pad" id="insights"><div className="section-heading"><div className="section-label">06 — A little thinking</div><a className="text-link" href="#contact">View all insights <span>↗</span></a></div><div className="insight-grid"><article><span className="article-tag">Perspective</span><h3>What a healthy Salesforce org actually looks like.</h3><a href="#contact">Read the thinking <span>↗</span></a></article><article><span className="article-tag">Field note</span><h3>AI is only as useful as the system underneath it.</h3><a href="#contact">Read the thinking <span>↗</span></a></article><article><span className="article-tag">Guide</span><h3>Five signals it is time to rethink your CRM.</h3><a href="#contact">Read the thinking <span>↗</span></a></article></div></section>
 
-      <section className="contact" id="contact"><div className="contact-mark">N<span>↗</span></div><div><div className="section-label">Your next move</div><h2>Let’s build<br /><em>what’s next.</em></h2><p>Tell us what is stuck, what is changing, or where you want to go. We will bring the right people to the first conversation.</p><a className="button button-dark" href="mailto:info@noventrixgloballtd.com">info@noventrixgloballtd.com <span>↗</span></a><p>Based in Bournemouth, UK<br />Calvin Road, Bournemouth BH9 1LN<br />Supporting clients across the UK and internationally.</p></div></section>
+      <section className="contact" id="contact"><Image className="contact-logo" src="/half_logo.png" alt="Noventrix Global LTD" width={1152} height={768} /><div><div className="section-label">Your next move</div><h2>Let’s build<br /><em>what’s next.</em></h2><p>Tell us what is stuck, what is changing, or where you want to go. We will bring the right people to the first conversation.</p><a className="button button-dark" href="mailto:info@noventrixgloballtd.com">info@noventrixgloballtd.com <span>↗</span></a><p>Based in Bournemouth, UK<br />Calvin Road, Bournemouth BH9 1LN<br />Supporting clients across the UK and internationally.</p></div></section>
 
       <footer className="site-footer">
         <div className="footer-top">
-          <div className="footer-brand"><a className="brand brand-footer" href="#top"><span className="brand-mark">N</span><span>Noventrix<span className="brand-dot">.</span></span></a><p>Salesforce strategy and delivery<br />for businesses going places.</p></div>
+          <div className="footer-brand"><a className="brand brand-footer" href="#top" aria-label="Noventrix Global LTD home"><Image className="brand-logo" src="/half_logo.png" alt="Noventrix Global LTD" width={1152} height={768} /></a><p>Salesforce strategy and delivery<br />for businesses going places.</p></div>
           <div className="footer-column"><span>Explore</span><a href="#services">Services</a><a href="#industries">Industries</a><a href="#approach">Our approach</a><a href="#contact">Contact</a></div>
           <div className="footer-column"><span>Contact</span><a href="mailto:info@noventrixgloballtd.com">info@noventrixgloballtd.com</a><span className="footer-subhead">Based in</span><p>Bournemouth, UK<br />Supporting clients across the UK and internationally.</p></div>
           <div className="footer-column footer-company"><span>Company details</span><p><strong>Noventrix Global LTD</strong><br />Company number 17127364<br />Registered in England and Wales</p><a href="https://find-and-update.company-information.service.gov.uk/company/17127364" rel="noreferrer">View Companies House record ↗</a></div>

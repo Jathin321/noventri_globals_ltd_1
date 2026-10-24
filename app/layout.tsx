@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   publisher: companyName,
   alternates: { canonical: "/" },
   icons: {
-    icon: "/logo.png",
+    icon: "/half_logo.png",
   },
   openGraph: {
     type: "website",
